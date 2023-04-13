@@ -31,6 +31,15 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+		ZMK_MACRO(sv_ae,
+        wait-ms = <40>;
+        tap-ms = <40>;
+        bindings 
+					= <&macro_press &kp LCTRL &kp LSHFT &kp U>;
+					, <&macro_tap &kp N0 &kp N0 &kp E &kp N4>;
+					, <&macro_release &kp LCTRL &kp LSHFT &kp U>
+					;
+    )
   };
 
     keymap {
@@ -61,7 +70,7 @@
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &tog 1                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
  &trans  &trans  &trans  &trans  &trans  &trans             &none                                                   &none  &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans   &none   &none  &trans  &trans   &none  &trans  &trans  &trans   &trans   &trans   &trans
+ &trans  &sv_ae  &trans  &trans  &trans  &trans             &none  &trans  &trans   &none   &none  &trans  &trans   &none  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans  &trans             &none   &none  &trans   &none   &none  &trans   &none   &none  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans   &trans   &trans   &trans
             >;
