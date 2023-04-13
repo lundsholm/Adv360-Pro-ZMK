@@ -39,7 +39,7 @@
 					, <&macro_tap &kp N0 &kp N0 &kp E &kp N4>;
 					, <&macro_release &kp LCTRL &kp LSHFT &kp U>
 					;
-    )
+    );
   };
 
     keymap {
