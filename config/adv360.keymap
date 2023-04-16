@@ -31,37 +31,6 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
-		sv_ea: sv_ea {
-			compatible = "zmk,behavior-macro";
-			label = "ZM_sv_ea";
-      #binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings 
-				= <&macro_press &kp LCTRL &kp LSHFT &kp U>
-				, <&macro_tap &kp N0 &kp N0 &kp C &kp N4>
-				, <&macro_release &kp LCTRL &kp LSHFT &kp U>
-				;
-		};
-		sv_ae: sv_ae {
-			compatible = "zmk,behavior-macro";
-			label = "ZM_sv_ae";
-      #binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings 
-				= <&macro_press &kp LCTRL &kp LSHFT &kp U>
-				, <&macro_tap &kp N0 &kp N0 &kp E &kp N4>
-				, <&macro_release &kp LCTRL &kp LSHFT &kp U>
-				;
-		};
-		td0: tap_dance_0 {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_0";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-			bindings = <&sv_ae>, <&sv_ea>;
-    };
   };
 
     keymap {
@@ -92,7 +61,7 @@
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &tog 1                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
  &trans  &trans  &trans  &trans  &trans  &trans             &none                                                   &none  &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &td0  &trans  &trans  &trans  &trans             &none  &trans  &trans   &none   &none  &trans  &trans   &none  &trans  &trans  &trans   &trans   &trans   &trans
+ &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans   &none   &none  &trans  &trans   &none  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans  &trans             &none   &none  &trans   &none   &none  &trans   &none   &none  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans   &trans   &trans   &trans
             >;
