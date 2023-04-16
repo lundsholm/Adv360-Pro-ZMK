@@ -31,9 +31,9 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
-		sv_AE: sv_AE {
+		sv_ea: sv_ea {
 			compatible = "zmk,behavior-macro";
-			label = "ZM_sv_AE";
+			label = "ZM_sv_ea";
       #binding-cells = <0>;
 			wait-ms = <40>;
 			tap-ms = <40>;
@@ -60,7 +60,7 @@
       label = "TAP_DANCE_0";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-			bindings = <&sv_ae>, <&sv_AE>;
+			bindings = <&sv_ae>, <&sv_ea>;
     };
   };
 
